@@ -14,8 +14,11 @@ module Listable
 	  	when "high" then " ⇧"
 	  	when "medium" then " ⇨" 
 	  	when "low" then " ⇩"
+	  	when nil then ""
   	else
-  		""
+  		raise UdaciListErrors::InvalidPriorityValue, "#{priority}: Invalid value for priority"
   	end	
   end
 end
+
+# raise UdacityListErrors::InvalidPriorityValue, "#{priority}: Invalid Priority argument "
