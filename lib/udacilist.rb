@@ -25,10 +25,13 @@ class UdaciList
   def all
     rows = []
     @items.each_with_index do |item, position|
-      rows << [position + 1, item.details]
+      rows << [position + 1, item.type.colorize(:light_blue), item.details]
     end
-    table = Terminal::Table.new :title => @title.colorize(:red), :rows => rows
+    table = Terminal::Table.new headings: ["Number","Type","Description & Date"], title: @title.colorize(:red), rows: rows
     puts table
   end
-  
+  def filter(type)
+    @items = @items.find_all {|item| item.type == type}
+  end
+
 end
