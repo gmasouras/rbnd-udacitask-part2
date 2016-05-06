@@ -11,6 +11,7 @@ class UdaciList
     when "todo" then @items.push TodoItem.new(description, options)
     when "event" then @items.push EventItem.new(description, options)
     when "link" then @items.push LinkItem.new(description, options)
+    when "vgame" then @items.push VideoGameItem.new(description, options)  # My new item addition
     else
       raise UdaciListErrors::InvalidItemType, "#{type}: Invalid type of item"
     end
@@ -21,6 +22,11 @@ class UdaciList
     else
       raise UdaciListErrors::IndexExceedsListSize, "There is no #{index} item in the list"
     end
+  end
+  def multiple_delete(descriptions = [])
+    descriptions.each { |description|
+      @items.delete_if {|item| item.description == description}
+    }
   end
   def all
     rows = []

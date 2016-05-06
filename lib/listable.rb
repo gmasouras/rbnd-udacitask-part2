@@ -20,5 +20,3 @@ module Listable
   	end	
   end
 end
-
-# raise UdacityListErrors::InvalidPriorityValue, "#{priority}: Invalid Priority argument "
