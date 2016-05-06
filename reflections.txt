@@ -1,13 +1,23 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+  - The gem of my choice is terminal-table.It helped me to 
+    illustrate my udacilist items in the console as a table - shape
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) A new item type - VideoGameItem
+  b) A method in the udacilist called multiple_delete, providing the chance to
+     the user deleting multiple items at once by passing the items’ descriptions 
+     in an array as argument  
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+   - About 5-6 hours
 2. What was the most rewarding challenge you conquered?
+   - Understanding the modules and the gems implementation
 3. What two additional features did you build? Why?
+   - A new item type just to check by myself how easy it is to create objects in a
+    well structured object oriented code.
 4. Where do you still have room to grow?
+   -The lack of confidence and experience to build it all by myself.
+   -Moreover the simple way my instructors think
