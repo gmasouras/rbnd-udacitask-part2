@@ -23,9 +23,9 @@ class UdaciList
     end
   end
   def all
-    puts "-" * @title.length
-    puts @title
-    puts "-" * @title.length
+    puts "-".colorize(:light_blue) * @title.length
+    puts @title.colorize(:red)
+    puts "-".colorize(:light_blue) * @title.length
     @items.each_with_index do |item, position|
       puts "#{position + 1}) #{item.details}"
     end
