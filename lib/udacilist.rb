@@ -23,11 +23,12 @@ class UdaciList
     end
   end
   def all
-    puts "-".colorize(:light_blue) * @title.length
-    puts @title.colorize(:red)
-    puts "-".colorize(:light_blue) * @title.length
+    rows = []
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      rows << [position + 1, item.details]
     end
+    table = Terminal::Table.new :title => @title.colorize(:red), :rows => rows
+    puts table
   end
+  
 end
